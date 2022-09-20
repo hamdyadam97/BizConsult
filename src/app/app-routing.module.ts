@@ -1,7 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ServiceComponent } from './service/service.component';
+import { ValueComponent } from './value/value.component';
+import { ContactComponent } from './contact/contact.component';
+import { ClintComponent } from './clint/clint.component';
+const routes: Routes = [
+  { path: 'home',component: HomeComponent },
+  { path: 'about',component: AboutComponent },
+  { path: 'service',component: ServiceComponent},
+  { path: 'contact', component: ContactComponent},
+  { path: 'value',component: ValueComponent },
+  { path: 'client',component: ClintComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
